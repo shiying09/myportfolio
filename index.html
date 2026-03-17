@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sy's portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="masonry-container" id="grid">
+
+        <div class="item item-tall">
+            <img class="mySlides" src="images/sunset1.jpeg" alt="photo" style="  width: 100%; height: 100%; object-fit: cover; border-radius: 20px; ">
+            <img class="mySlides" src="images/travel1.jpeg" alt="photo" style="  width: 100%; height: 100%; object-fit: cover; border-radius: 20px; ">
+            <img class="mySlides" src="images/sunset3.jpeg" alt="photo" style="  width: 100%; height: 100%; object-fit: cover; border-radius: 20px; ">
+        </div>
+
+        <div class="item">
+            <div class="item connect-tile">
+                <h4>let's connect!</h4> 
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ng-shi-ying/" class="fa fa-linkedin"></a>
+                    <a href="mailto:ngshiying09@gmail.com" class="fa fa-envelope"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="item item-wide">
+            <h2>VALERIE | SHI YING </h2>
+        </div>
+
+        <div class="item">
+            <!-- Rounded switch -->
+            <label class="switch">
+            <input type="checkbox" id="darkToggle">
+            <span class="slider"></span>
+            </label>
+
+            <picture style="padding-right: 10px ;">
+                <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31c/512.webp" type="image/webp">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31c/512.gif" alt="🌜" width="32" height="32">
+            </picture>
+
+        </div>
+
+        <div class="item item-big about-box" id="about-container">
+            <h4>Behind the Journey ✨</h4>
+
+            <div id="about-content">
+                <p> <br>
+                    Recently graduated with a B.Sc in Mathematical Sciences, focusing on statistics and data analysis.
+                    <br> <br>
+                    I’m currently working as a full-time math tutor in Singapore, helping students build confidence in math, understand concepts clearly, and approach problems with a logical mindset. 
+                    I enjoy guiding students through challenging questions and seeing them develop their own ways of thinking.
+                    <br> <br>
+                    Outside of teaching, I enjoy taking photos, exploring digital art, and occasionally working on small coding projects. I’m naturally curious and enjoy learning new things, one step at a time.
+                </p>
+            </div>
+        </div>
+
+        <div class="item item-small">
+            <img class="mySlides" src="images/self1.png" alt="photo" style=" width: 100%; height: 100%; object-fit: cover; border-radius: 20px; ">
+            <img class="mySlides" src="images/self2.jpg" alt="photo" style=" width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+        </div>
+
+        <div class="item item-tall about-box" id="about-container">
+            <section class="journey">
+
+                <h4>🧭 My Explorations</h4>
+
+                <div class="journey-list">
+
+                    <div class="journey-item" onclick="openPopup('jnj')" style="font-size: 10px; color: #121212;">
+                    📍 <b>Exploring Data</b> at Johnson & Johnson
+                    </div>
+
+                    <div class="journey-item" onclick="openPopup('tutor')" style="font-size: 10px; color: #121212;">
+                    📍 Becoming a <b>Math Tutor</b>
+                    </div>
+
+                </div>
+
+                </section>
+
+        </div>
+        
+        <!-- Popup -->
+        <div id="popup" class="popup" >
+            <div class="popup-content" style="font-size: 10px; color: #121212;" >
+
+                <span class="close" onclick="closePopup()">✖</span>
+
+                <div id="popup-text"></div>
+
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div id="clock"></div>
+        </div>
+
+        <div class="item">
+            
+            <a href="#" onclick="alert('Hey there! 👋 Thanks for visiting my little corner of the internet 🌿');">
+                <picture>
+                    <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f423/512.webp" type="image/webp">
+                    <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f423/512.gif" alt="🐣" width="32" height="32">
+                </picture>
+            </a>
+        </div>
+
+        <div class="item item-small">
+            <img class="mySlides" src="images/grad1.jpeg" alt="photo" style=" width: 100%; height: 100%; object-fit: cover; border-radius: 20px; ">
+            <img class="mySlides" src="images/work1.jpeg" alt="photo" style=" width: 100%; height: 100%; object-fit: cover; border-radius: 20px; ">
+        </div>
+
+        <div class="item item-wide">
+            <span id="typing"></span>
+        </div>
+
+        <div class="item">
+            <div><span id="views"></span><p>curious wanderers</p></div>
+        </div>
+
+        <div class="item">
+            <picture>
+                <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f497/512.webp" type="image/webp">
+                <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f497/512.gif" alt="💗" width="32" height="32">
+            </picture>
+
+        </div>
+
+        <div class="item">
+            <img  src="images/sunset2.jpeg" alt="photo" style=" width: 100%; height: 100%; object-fit: cover; border-radius: 20px; ">
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+    
+
+
+
+</body>
+</html>

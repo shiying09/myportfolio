@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: sans-serif;
+}
+
+.masonry-container {
+    display: grid;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* Column width and row height */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: 100px; 
+    gap: 12px;
+    grid-auto-flow: dense; 
+    padding: 15px;
+}
+
+
+.item {
+    background-color: #87bcdf;
+    color: rgb(39, 39, 39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: transform 0.2s;
+}
+
+.item:hover { 
+    transform: scale(1.02); 
+}
+
+
+/* Variation Classes */
+.item-tall { grid-row: span 3; background-color: #ff8e84; }
+.item-wide { grid-column: span 2; background-color: #7bbbb4; }
+.item-big { grid-column: span 2; grid-row: span 2; background-color: #fdcc88;}
+.item-small { grid-column: span 1;grid-row: span 2; background-color: #887fa1; }
+
+#views{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+#clock{
+    text-align: center;
+    margin: 20px;
+    font-size: 1rem;
+}
+
+.dark{
+    background: grey;
+    color:white;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color:  rgb(39, 39, 39);
+
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+
+/*toggle switch/dark mode*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 10px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #3498db;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+/* The container box */
+.connect-tile {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between the text and the icons */
+    padding: 15px;
+}
+
+/* The "let's connect" text */
+.connect-tile h4 {
+    margin: 0;
+    font-weight: 400; /* Softer look */
+    font-size: 0.9rem;
+    color: #000000; /* White text to match your blue tile */
+    text-align: center;
+}
+
+/* The row for the icons */
+.social-links {
+    display: flex;
+    flex-direction: row; /* Puts icons side-by-side */
+    gap: 20px;           /* Space between the two icons */
+}
+
+/* Styling the icons specifically */
+.connect-tile a {
+    color: rgb(96, 96, 96);
+    font-size: 24px;
+    transition: opacity 0.3s;
+}
+
+.about-box {
+    position: relative; /* Essential for button positioning */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.journal{
+    width:480px;
+    max-width:90%;
+    background:#fffdf8;
+    border-radius:14px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+    animation:journalOpen 0.3s ease;
+}
+
+
+
+.journey-list{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    align-items:center;
+}
+
+.journey-item{
+    cursor:pointer;
+    font-size:18px;
+    padding:10px 20px;
+    border-radius:20px;
+    transition:0.3s;
+    background-color: whitesmoke;
+}
+
+.journey-item:hover{
+    background:#f0f4ff;
+    transform:scale(1.05);
+}
+
+/* Popup background */
+@keyframes journalOpen{
+
+    from{
+    transform:scale(0.8) translateY(40px);
+    opacity:0;
+    }
+
+    to{
+    transform:scale(1) translateY(0);
+    opacity:1;
+    }
+
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(1px);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+/* Popup box */
+
+.popup-content{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    max-width:500px;
+    position:relative;
+    line-height:1.6;
+}
+
+/* Close button */
+
+.close{
+    position:absolute;
+    top:10px;
+    right:15px;
+    cursor:pointer;
+    font-size:18px;
+}
+            
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    color: cornsilk;
+    font-weight: 400;       /* Lighter weight is much "softer" */
+    letter-spacing: -0.5px; /* Slight tightening can also feel "elegant" */
+}
+
+h3{
+    padding-bottom: 10px;
+}
+
+
+p{
+    font-size: 0.7rem;
+}
