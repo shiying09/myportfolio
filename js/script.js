@@ -33,10 +33,14 @@ setInterval(updateClock,1000);
 updateClock();
 
 /*Views*/
-fetch("https://api.countapi.xyz/hit/shiying09-myportfolio/visits")
-.then(response => response.json())
+document.addEventListener("DOMContentLoaded", function () {
+
+fetch("https://countapi.mileshilliard.com/api/v1/hit/shiying09_myportfolio")
+.then(res => res.json())
 .then(data => {
     document.getElementById("views").textContent = data.value;
+});
+
 });
 
 /*Dark mode*/
