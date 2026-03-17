@@ -33,16 +33,11 @@ setInterval(updateClock,1000);
 updateClock();
 
 /*Views*/
-let views = localStorage.getItem("page_views");
-
-if(views){
-    views++;
-}else{
-    views = 1;
-}
-
-localStorage.setItem("page_views",views);
-document.getElementById("views").textContent = views;
+fetch("https://api.countapi.xyz/hit/shiying09-myportfolio/visits")
+.then(response => response.json())
+.then(data => {
+    document.getElementById("views").textContent = data.value;
+});
 
 /*Dark mode*/
 const toggle = document.getElementById("darkToggle");
