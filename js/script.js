@@ -114,7 +114,7 @@ jnj: `
 tutor: `
 <h3>📍 Guiding Students as a Math Tutor</h3>
 
-<p>Currently working as a <b> Mathematics Tutor </b> in <b> Ikigai Math </b>. With a background in Mathematical Sciences, I enjoy guiding students 
+<p>Currently working as a <b> Mathematics Tutor </b> in <b> Ikigai Math</b>. With a background in Mathematical Sciences, I enjoy guiding students 
  through the little “aha” moments that make math start to feel less intimidating and more like solving a puzzle. </p>
 
 <br>
